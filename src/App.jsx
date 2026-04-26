@@ -1,9 +1,23 @@
+
+
+import UserInputGroup from "./components/UserInputGroup";
+import InvestmentResult from "./components/InvestmentResult";
+
+import './util/investment';
+
+
+
+
 function App() {
-  const myval = 123;
-  
-  return (
-    <h1>React Investment Calculator</h1>
-  )
+
+ 
+
+
+
+  return (<>
+    <UserInputGroup/>
+    <InvestmentResult />
+  </>);
 }
 
 export default App
