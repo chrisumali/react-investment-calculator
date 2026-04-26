@@ -1,6 +1,9 @@
-import { formatter } from  '../util/investment';
+import { formatter, calculateInvestmentResults } from  '../util/investment';
 
-export default function InvestmentResult({ results }){
+export default function InvestmentResult({ userInput }){
+
+    const results = calculateInvestmentResults(userInput);
+
     return (<table id="result">
         <thead>
             <tr>

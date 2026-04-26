@@ -15,18 +15,17 @@ function App() {
   });
 
   function handleInputChange(inputIdentifier, newValue){
-      console.log(inputIdentifier + ' - ' + newValue);
       setUserInput((prevUserInput) => {
           return {
               ...prevUserInput,
-              [inputIdentifier]: newValue
+              [inputIdentifier]: +newValue
           };
       });
   }
 
   return (<>
     <UserInputGroup userInput={userInput} handleInputChange={handleInputChange}/>
-    <InvestmentResult />
+    <InvestmentResult userInput={userInput} />
   </>);
 }
 
