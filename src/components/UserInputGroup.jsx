@@ -1,26 +1,13 @@
-import { useState } from "react";
+
 
 import UserInput from "./UserInput";
 
 // eslint-disable-next-line react/prop-types
-export default function UserInputGroup(){
+export default function UserInputGroup({userInput, handleInputChange}){
 
-    const[userInput, setUserInput] = useState({
-        initialInvestment: 0,
-        annualInvestment: 0,
-        expectedReturn: 0,
-        duration: 0
-    });
+    
 
-    function handleInputChange(inputIdentifier, newValue){
-        console.log(inputIdentifier + ' - ' + newValue);
-        setUserInput((prevUserInput) => {
-            return {
-                ...prevUserInput,
-                [inputIdentifier]: newValue
-            };
-        });
-    }
+    
 
     return (<div id="user-input">
         <section className="input-group">
